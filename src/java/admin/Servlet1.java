@@ -19,6 +19,7 @@ public class Servlet1 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        response.setHeader("Access-Control-Allow-Origin","*");
         PrintWriter out=response.getWriter();
         String ruta = request.getRealPath("/");
         String user = request.getParameter("user");
